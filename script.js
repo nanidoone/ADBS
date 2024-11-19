@@ -1,19 +1,13 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
-
+    
+    // Capture the username and password values
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    if (username === "admin" && password === "password123") {
-        // Show an alert if ma  successful ang login
-        alert("Login successful!");
+    // For now, we are allowing any username and password to log in successfully
+    alert("Login successful!"); // Show a success alert
 
-        // adto dayon ni siya sa  inventory page after alert is dismissed
-        window.location.href = "inventory.html";
-    } else {
-        // Display an error message if login fails hehe
-        const errorMessage = document.getElementById("errorMessage");
-        errorMessage.textContent = "Invalid username or password!";
-        errorMessage.style.display = "block";
-    }
+    // Redirect to the inventory page after the alert is dismissed
+    window.location.href = "inventory.html";
 });
